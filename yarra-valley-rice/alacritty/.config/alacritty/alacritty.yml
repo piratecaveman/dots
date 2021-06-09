@@ -1,0 +1,18 @@
+live_config_reload: true
+
+import:
+    - ~/.config/alacritty/window.yml
+    - ~/.config/alacritty/font.yml
+    - ~/.config/alacritty/bell.yml
+    - ~/.config/alacritty/yarra-valley-theme.yml
+
+env:
+    TERM: alacritty
+
+selection:
+    save_to_clipboard: false
+
+cursor:
+    style:
+        shape: Block
+        blinking: Off
