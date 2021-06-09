@@ -1,0 +1,4 @@
+#include "/home/wraith/.config/customization/aesthetics/xresources.d/urxvt.conf"
+#include "/home/wraith/.config/customization/aesthetics/xresources.d/xft.conf"
+#include "/home/wraith/.config/customization/aesthetics/xresources.d/colorscrhemes.d/modern.conf"
+#include "/home/wraith/.config/customization/aesthetics/xresources.d/xterm.conf"
