@@ -4,7 +4,6 @@ require("keymap")
 
 -- theme
 -- require("zephyr")
-vim.cmd[[colorscheme tokyonight]]
 
 -- alias for vim.api.nvim_set_option()
 local o = vim.o 

@@ -33,7 +33,6 @@ return require("packer").startup(
 		use 'liuchengxu/vim-which-key'
 		use 'windwp/nvim-autopairs'
 		-- theme
-		-- use 'glepnir/zephyr-nvim'
-		use 'folke/tokyonight.nvim'
+		use 'glepnir/zephyr-nvim'
 	end
 )

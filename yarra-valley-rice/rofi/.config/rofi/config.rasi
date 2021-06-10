@@ -1,0 +1,12 @@
+configuration 
+{
+	modi: "combi,run,drun,window,file-browser";
+	width: 35;
+	lines: 8;
+	columns: 1;
+	font: "Iosevka 15";
+	show-icons: true;
+	terminal: "rofi-sensible-terminal";
+	icon-theme: "haiku";
+	theme: "/home/wraith/.cache/colstract/colors-rofi-light.rasi";
+}
