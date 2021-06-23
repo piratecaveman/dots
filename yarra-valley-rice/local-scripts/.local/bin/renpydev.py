@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 """
 Enable developer mode in Renpy Games
 """

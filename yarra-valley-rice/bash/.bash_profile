@@ -10,10 +10,12 @@ source_file() {
 	fi
 }
 
+environ="${HOME}/.config/customization/environ"
+
 SOURCES_LIST=(
-	"${HOME}/.config/customization/environ/export.d/export.sh"
-	"${HOME}/.config/customization/environ/alias.d/alias.sh"
-	"${HOME}/.config/customization/environ/export.d/proxy.sh"
+	"${environ}/export.d/export.sh"
+	"${environ}/alias.d/alias.sh"
+	"${environ}/export.d/proxy.sh"
 	"${HOME}/.bashrc"
 )
 

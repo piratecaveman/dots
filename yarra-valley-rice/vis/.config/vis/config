@@ -88,4 +88,4 @@ visualizer.ellipse.radius=2
 colors.override.terminal=true
 
 ##Specifies the color scheme. The color scheme must be in ~/.config/vis/colors/ directory. The default scheme is "colors".
-colors.scheme=rednavy,colorsone,redblue,shitty-colorscheme
+colors.scheme=rednavy,colorsone,redblue
