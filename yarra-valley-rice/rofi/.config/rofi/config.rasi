@@ -7,6 +7,6 @@ configuration
 	font: "Iosevka 15";
 	show-icons: true;
 	terminal: "rofi-sensible-terminal";
-	icon-theme: "haiku";
+	icon-theme: "Zafiro-Icons-Black-Red";
 	theme: "/home/wraith/.cache/colstract/colors-rofi-light.rasi";
 }

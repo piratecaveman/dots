@@ -88,5 +88,9 @@ XF86AudioRaiseVolume
 XF86AudioMute
 	pactl set-sink-mut @DEFAULT_SINK@ toggle
 
+# screenshots
+super + alt + {s,f}
+	maim {-s, } | xclip -selection clipboard -t image/png
 
-	
+ctrl + alt + {s,f}
+	maim {-s, } "/tmp/$(xdotool getactivewindow getwindowname)-$(date +%s).png"
