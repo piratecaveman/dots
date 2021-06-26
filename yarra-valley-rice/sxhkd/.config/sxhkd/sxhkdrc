@@ -94,3 +94,10 @@ super + alt + {s,f}
 
 ctrl + alt + {s,f}
 	maim {-s, } "/tmp/$(xdotool getactivewindow getwindowname)-$(date +%s).png"
+
+
+super + shift + alt + {s,f}
+	maim {-s -d 5, -d 5} | xclip -selection clipboard -t image/png
+
+ctrl + shift + alt + {s,f}
+	maim {-s -d 5, -d 5} "/tmp/$(xdotool getactivewindow getwindowname)-$(date +%s).png"
