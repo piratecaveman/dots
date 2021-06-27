@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-OUTPUT_DIR="${HOME}/storage/smut/rclone-lists"
+if [[ -z "${1}" ]]; then
+    OUTPUT_DIR="${PWD}"
+else
+    OUTPUT_DIR="${1}"
+fi
+
 if [[ ! -d "${OUTPUT_DIR}" ]]; then
     mkdir -p "${OUTPUT_DIR}"
 fi
