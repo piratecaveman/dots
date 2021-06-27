@@ -2,18 +2,14 @@
 
 pgrep -x sxhkd >/dev/null || sxhkd -r /tmp/sxhkd.log &
 
-# modified
+# startup
 xsetroot -cursor_name left_ptr &
 xrdb -load .Xresources &
-bash "${HOME}"/.fehbg &
-bash "${HOME}"/.config/polybar/launch.sh &
-pgrep -x picom >/dev/null || picom --experimental-backends &
-pgrep -x polkit-kde-auth >/dev/null || /usr/lib/polkit-kde-authentication-agent-1 &
-pgrep -x dunst >/dev/null || dunst &
-if [ -z "$(pgrep -f /home/wraith/.node_modules/bin/gt)" ]; then
-    /home/wraith/.node_modules/bin/gt --dns-type "tls" --dns-server "8622a7.dns.nextdns.io" &
-fi
+"${HOME}/.fehbg"
+"${HOME}/.config/polybar/launch.sh"
+"${HOME}/.config/bspwm/startup.sh"
 
+# configuration
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width 0
