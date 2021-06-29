@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ -z "${1}" ]]; then
-    OUTPUT_DIR="${PWD}"
-else
-    OUTPUT_DIR="${1}"
-fi
+OUTPUT_DIR="${PWD}"
 
 if [[ ! -d "${OUTPUT_DIR}" ]]; then
     mkdir -p "${OUTPUT_DIR}"
@@ -30,16 +26,20 @@ function get_listing() {
     /usr/bin/rclone lsd -R "${host}:" >"${OUTPUT_DIR}/${host}.txt"
 }
 
-get_listing "${box_1}"
-get_listing "${box_2}"
-get_listing "${box_general}"
-get_listing "${mega_iamabot_another}"
-get_listing "${mega_iamabot_yandex}"
-get_listing "${mega_iamabot001}"
-get_listing "${mega_iamrobox001}"
-get_listing "${mega_kj1594}"
-get_listing "${mega_mega_1}"
-get_listing "${mega_nohjeodpourg}"
-get_listing "${pcloud_iamabot001}"
-get_listing "${pcloud_pcloud_1}"
-get_listing "${pcloud_pcloud_2}"
+if [[ -z "${1}" ]]; then
+    get_listing "${1}"
+else
+    get_listing "${box_1}"
+    get_listing "${box_2}"
+    get_listing "${box_general}"
+    get_listing "${mega_iamabot_another}"
+    get_listing "${mega_iamabot_yandex}"
+    get_listing "${mega_iamabot001}"
+    get_listing "${mega_iamrobox001}"
+    get_listing "${mega_kj1594}"
+    get_listing "${mega_mega_1}"
+    get_listing "${mega_nohjeodpourg}"
+    get_listing "${pcloud_iamabot001}"
+    get_listing "${pcloud_pcloud_1}"
+    get_listing "${pcloud_pcloud_2}"
+fi

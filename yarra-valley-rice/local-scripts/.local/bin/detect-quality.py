@@ -35,7 +35,10 @@ elif directory.is_file():
     exit(1)
 
 if __name__ == '__main__':
-    files = list(directory.glob("*.[jpg][jpeg][png][webp]"))
+    files = list(directory.glob("*.jpg"))
+    files.extend(directory.glob("*.webp"))
+    files.extend(directory.glob("*.png"))
+    files.extend(directory.glob("*.jpeg"))
     total = len(files) if len(files) < sample_size else sample_size
     command = ['identify', '-format', '%Q']
     quality: int = 0
