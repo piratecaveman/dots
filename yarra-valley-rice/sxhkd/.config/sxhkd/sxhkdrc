@@ -90,14 +90,14 @@ XF86AudioMute
 
 # screenshots
 super + alt + {s,f}
-	maim {-s, } | xclip -selection clipboard -t image/png
+	maim {-s -u -d 1, -d 1} | xclip -selection clipboard -t image/png
 
 ctrl + alt + {s,f}
-	maim {-s, } "/tmp/$(xdotool getactivewindow getwindowname)-$(date +%s).png"
+	maim {-s -u -d 1, -d 1} "/tmp/$(xdotool getactivewindow getwindowname)-$(date +%s).png"
 
 
 super + shift + alt + {s,f}
-	maim {-s -d 5, -d 5} | xclip -selection clipboard -t image/png
+	maim {-s -u -d 5, -d 5} | xclip -selection clipboard -t image/png
 
 ctrl + shift + alt + {s,f}
-	maim {-s -d 5, -d 5} "/tmp/$(xdotool getactivewindow getwindowname)-$(date +%s).png"
+	maim {-s -u -d 5, -d 5} "/tmp/$(xdotool getactivewindow getwindowname)-$(date +%s).png"
