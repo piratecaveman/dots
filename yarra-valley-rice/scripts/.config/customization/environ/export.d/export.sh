@@ -23,3 +23,4 @@ export VISUAL="/usr/bin/nvim"
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Djdk.gtk.version=3'
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export ANDROID_SDK_ROOT="${HOME}/storage/development/android-sdk"
+export PAGER="most"
