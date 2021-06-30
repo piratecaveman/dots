@@ -19,7 +19,7 @@ if [[ -z ${PADDING} ]]; then
 fi
 
 counter=1
-current_time="$(date +%F)#$(date +%T)"
+current_time="$(date +%F)#$(date +%H-%m-%s)"
 printf "\t${GREEN}Renaming files in: ${BOLD}${AQUA}%s${RESET}\n" "${PWD}"
 while IFS= read -r -d '' item; do
   printf -v current_pos "%0${PADDING}d" "${counter}"
