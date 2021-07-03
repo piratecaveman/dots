@@ -73,18 +73,26 @@ alt + {_,shift + } x
 
 # toggle borders
 super + {_,alt + } b
-	bspc config border_width {2,0}
+	bspc config border_width {5,0}
 
+super + {_,alt + } g
+	bspc config window_gap {0,5}
+
+
+# brightness control
 XF86MonBrightnessUp
 	light -A 5
 
 XF86MonBrightnessDown
 	light -U 5
 
+# volume control
 XF86AudioLowerVolume
 	pactl set-sink-volume @DEFAULT_SINK@ -1000
+
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +1000
+
 XF86AudioMute
 	pactl set-sink-mut @DEFAULT_SINK@ toggle
 

@@ -1,12 +1,14 @@
 configuration 
 {
-	modi: "combi,run,drun,window,file-browser";
+	modi: "combi,run,drun,window,file-browser,windowcd";
 	width: 35;
 	lines: 8;
 	columns: 1;
-	font: "Iosevka 15";
+	font: "Cascadia Code PL Italic 15";
 	show-icons: true;
 	terminal: "rofi-sensible-terminal";
-	icon-theme: "Papirus-Dark";
-	theme: "/home/wraith/.cache/colstract/colors-rofi-light.rasi";
+	icon-theme: "Papirus";
+	theme: "/home/wraith/.cache/colstract/colors-rofi-dark.rasi";
+	matching: "fuzzy";
+	sidebar-mode: true;
 }
