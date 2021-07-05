@@ -135,6 +135,8 @@
 }
 
 #button.selected {
+    border: 2px;
+    border-color: @active-background;
     background-color: @selected-normal-background;
     text-color: @selected-normal-foreground;
 }
