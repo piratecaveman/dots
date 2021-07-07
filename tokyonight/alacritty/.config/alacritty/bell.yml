@@ -1,0 +1,5 @@
+bell:
+    animation: EaseOutExpo
+    duration: 1
+    color: '#ffffff'
+    command: None
