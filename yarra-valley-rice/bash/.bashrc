@@ -20,23 +20,16 @@ source_file() {
 	fi
 }
 
-CUSTOM="${HOME}/.config/customization/environ"
-ALIAS="${CUSTOM}/alias.d"
-EXPORTS="${CUSTOM}/export.d"
+SCRIPTS="${USER_CUSTOM}/scripts"
 SOURCES_LIST=(
-	"${ALIAS}/alias.sh"
-	"${EXPORTS}/exports.sh"
-	"${EXPORTS}/change_prompt_colors.sh"
-	"${EXPORTS}/fzf.sh"
-	"${EXPORTS}/proxy.sh"
-	"${EXPORTS}/onions.sh"
+	"${SCRIPTS}/exports.sh"
 	"/usr/share/fzf/key-bindings.bash"
 	"/usr/share/fzf/completion.bash"
 	"/usr/share/fzf-tab-completion/bash/fzf-bash-completion.sh"
 )
 
-for i in "${SOURCES_LIST[@]}"; do
-	source_file "${i}"
+for item in "${SOURCES_LIST[@]}"; do
+	source_file "${item}"
 done
 
 bind -x '"\C-\t": fzf_bash_completion'

@@ -10,17 +10,16 @@ source_file() {
 	fi
 }
 
-environ="${HOME}/.config/customization/environ"
+USER_CUSTOM="${HOME}/.config/user_custom"
+SCRIPTS="${USER_CUSTOM}/scripts"
 
 SOURCES_LIST=(
-	"${environ}/export.d/export.sh"
-	"${environ}/alias.d/alias.sh"
-	"${environ}/export.d/proxy.sh"
+	"${SCRIPTS}/exports.sh"
 	"${HOME}/.bashrc"
 )
 
-for i in "${SOURCES_LIST[@]}"; do
-	source_file "${i}"
+for item in "${SOURCES_LIST[@]}"; do
+	source_file "${item}"
 done
 
 setproxy
