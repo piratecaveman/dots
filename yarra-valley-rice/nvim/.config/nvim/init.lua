@@ -3,7 +3,7 @@ require("plugin-loader")
 require("keymap")
 
 -- theme
--- require("zephyr")
+require("zephyr")
 
 -- alias for vim.api.nvim_set_option()
 local o = vim.o 

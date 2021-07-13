@@ -5,7 +5,7 @@ import:
     - ~/.config/alacritty/font.yml
     - ~/.config/alacritty/bell.yml
     - ~/.config/alacritty/yarra-valley-theme.yml
-
+    # - ~/.config/alacritty/tokyonight.yml
 env:
     TERM: alacritty
 

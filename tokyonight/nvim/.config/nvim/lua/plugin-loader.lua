@@ -1,6 +1,0 @@
-require("nvim-autopairs").setup({})
-require("lsp_extensions").inlay_hints()
-require("rust-analyzer-settings")
-require("bufferline-settings")
-require("galaxyline-settings")
-require("bash-settings")
