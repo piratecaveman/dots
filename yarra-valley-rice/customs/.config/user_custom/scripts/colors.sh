@@ -1,15 +1,26 @@
 #!/usr/bin/env bash
 
-COLOR_UNDERLINE="$(tput sgr 0 1)"
-COLOR_BOLD="$(tput bold)"
-COLOR_RED="$(tput setaf 1)"
-COLOR_GREEN="$(tput setaf 2)"
-COLOR_YELLOW="$(tput setaf 3)"
-COLOR_BLUE="$(tput setaf 4)"
-COLOR_VIOLET="$(tput setaf 5)"
-COLOR_AQUA="$(tput setaf 6)"
-COLOR_WHITE="$(tput setaf 7)"
-COLOR_RESET="$(tput sgr0)"
+# COLOR_UNDERLINE="$(tput sgr 0 1)"
+# COLOR_BOLD="$(tput bold)"
+# COLOR_RED="$(tput setaf 1)"
+# COLOR_GREEN="$(tput setaf 2)"
+# COLOR_YELLOW="$(tput setaf 3)"
+# COLOR_BLUE="$(tput setaf 4)"
+# COLOR_VIOLET="$(tput setaf 5)"
+# COLOR_AQUA="$(tput setaf 6)"
+# COLOR_WHITE="$(tput setaf 7)"
+# COLOR_RESET="$(tput sgr0)"
+
+COLOR_UNDERLINE="\[$(tput sgr 0 1)\]"
+COLOR_BOLD="\[$(tput bold)\]"
+COLOR_RED="\[$(tput setaf 1)\]"
+COLOR_GREEN="\[$(tput setaf 2)\]"
+COLOR_YELLOW="\[$(tput setaf 3)\]"
+COLOR_BLUE="\[$(tput setaf 4)\]"
+COLOR_VIOLET="\[$(tput setaf 5)\]"
+COLOR_AQUA="\[$(tput setaf 6)\]"
+COLOR_WHITE="\[$(tput setaf 7)\]"
+COLOR_RESET="\[$(tput sgr0)\]"
 
 unset_colors() {
     unset COLOR_UNDERLINE

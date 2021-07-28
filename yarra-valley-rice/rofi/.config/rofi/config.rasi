@@ -1,6 +1,6 @@
 configuration 
 {
-	modi: "combi,run,drun,window,file-browser,windowcd";
+	modi: "combi,drun";
 	width: 35;
 	lines: 8;
 	columns: 1;
@@ -9,6 +9,6 @@ configuration
 	terminal: "rofi-sensible-terminal";
 	icon-theme: "Papirus";
 	theme: "/home/wraith/dots/yarra-valley-rice/rofi/.config/rofi/themes/colors-rofi-dark.rasi";
-	matching: "fuzzy";
+	matching: "normal";
 	sidebar-mode: true;
 }
