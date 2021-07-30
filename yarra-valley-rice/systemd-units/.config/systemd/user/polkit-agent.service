@@ -1,0 +1,12 @@
+[Unit]
+Description=Starts polkit authentication agent
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/lib/polkit-kde-authentication-agent-1
+ExecStop=/usr/bin/kill $MAINPID
+TimeOutStopSec=5s
+
+[Install]
+WantedBy=xlaunched.target

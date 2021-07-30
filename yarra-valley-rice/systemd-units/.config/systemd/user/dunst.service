@@ -1,0 +1,12 @@
+[Unit]
+Description=Starts dunst notification daemon
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/dunst
+ExecStop=/usr/bin/kill $MAINPID
+TimeOutStopSec=5s
+
+[Install]
+WantedBy=xlaunched.target

@@ -1,5 +1,8 @@
 #!/usr/bin/sh
 
+for file in /etc/X11/xinit/xinitrc.d/*.sh; do
+    source "${file}"
+done
 eval "$(ssh-agent)"
 export AWT_TOOLKIT=MToolkit
 export GTK_IM_MODULE=ibus

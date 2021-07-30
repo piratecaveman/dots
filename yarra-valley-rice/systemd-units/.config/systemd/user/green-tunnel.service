@@ -1,0 +1,12 @@
+[Unit]
+Description=Green Tunnel service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=%h/.node_modules/bin/gt --dns-type "tls" --dns-server "45.90.28.0#8622a7.nextdns.io"
+ExecStop=/usr/bin/kill $MAINPID
+TimeOutStopSec=5s
+
+[Install]
+WantedBy=default.target

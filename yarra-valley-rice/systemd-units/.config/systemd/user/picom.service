@@ -1,0 +1,12 @@
+[Unit]
+Description=picom compositor
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/picom --experimental-backends -c
+ExecStop=/usr/bin/kill $MAINPID
+TimeOutStopSec=5s
+
+[Install]
+WantedBy=xlaunched.target
