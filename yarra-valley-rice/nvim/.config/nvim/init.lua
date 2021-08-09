@@ -3,7 +3,7 @@ require("plugin-loader")
 require("keymap")
 
 -- theme
-require("zephyr")
+-- require("zephyr")
 
 -- alias for vim.api.nvim_set_option()
 local o = vim.o 
@@ -16,6 +16,7 @@ local wo = vim.wo
 -- configuration
 wo.number = true
 wo.wrap = true
+o.ruler = false
 o.incsearch = true
 o.hlsearch = true
 o.completeopt = "menuone,noinsert"

@@ -33,3 +33,5 @@ for item in "${SOURCES_LIST[@]}"; do
 done
 
 bind -x '"\C-\t": fzf_bash_completion'
+
+source /home/wraith/.config/broot/launcher/bash/br

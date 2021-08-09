@@ -23,3 +23,5 @@ for item in "${SOURCES_LIST[@]}"; do
 done
 
 setproxy
+
+source /home/wraith/.config/broot/launcher/bash/br

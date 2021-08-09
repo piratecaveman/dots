@@ -21,12 +21,11 @@ pcloud_pcloud_1="pcloud-pcloud-1"
 pcloud_pcloud_2="pcloud-pcloud-2"
 
 function get_listing() {
-    host="${1}"
-    echo "Getting listings for ${host}: ..."
-    /usr/bin/rclone lsd -R "${host}:" >"${OUTPUT_DIR}/${host}.txt"
+    echo "Getting listings for ${1}: ..."
+    /usr/bin/rclone lsd -R "${1}:" >"${OUTPUT_DIR}/${1}.txt"
 }
 
-if [[ -z "${1}" ]]; then
+if [[ -n "${1}" ]]; then
     get_listing "${1}"
 else
     get_listing "${box_1}"

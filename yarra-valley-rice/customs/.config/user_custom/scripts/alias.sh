@@ -10,3 +10,4 @@ alias cpas="cat .secrets/pass.txt | xclip -sel c"
 alias clpas="head -n 10 /dev/null | xclip -sel c"
 alias myip="curl https://checkip.amazonaws.com"
 alias cman='PAGER=most man'
+alias lsd="lsd -A"
