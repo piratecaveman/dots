@@ -1,6 +1,6 @@
 * {
     active-background: #aecc00;
-    active-foreground: #1c1f2b;
+    active-foreground: @background;
     normal-background: @background;
     normal-foreground: @foreground;
     urgent-background: #f14360;
@@ -14,11 +14,11 @@
     alternate-urgent-foreground: @foreground;
 
     selected-active-background: #f14360;
-    selected-active-foreground: #1c1f2b;
+    selected-active-foreground: @background;
     selected-normal-background: #aecc00;
-    selected-normal-foreground: #1c1f2b;
+    selected-normal-foreground: @background;
     selected-urgent-background: #ff9d35;
-    selected-urgent-foreground: @foreground;
+    selected-urgent-foreground: @background;
 
     background-color: @background;
     background: #1c1f2b;
@@ -31,6 +31,7 @@
     background-color: @background;
     border: 0;
     padding: 2.5ch;
+    width: 45%;
 }
 
 #mainbox {
@@ -66,11 +67,24 @@
     spacing: 2px;
     scrollbar: true;
     padding: 2px 0px 0px;
+    lines: 8;
 }
 
 #element {
     border: 0;
     padding: 1px;
+}
+
+#element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+#element-icon {
+    background-color: inherit;
+    text-color: inherit;
+    padding: 5px;
+    size: 18;
 }
 
 #element.normal.normal {
@@ -135,8 +149,6 @@
 }
 
 #button.selected {
-    border: 2px;
-    border-color: @active-background;
     background-color: @selected-normal-background;
     text-color: @selected-normal-foreground;
 }

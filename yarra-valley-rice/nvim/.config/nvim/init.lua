@@ -3,14 +3,14 @@ require("plugin-loader")
 require("keymap")
 
 -- theme
--- require("zephyr")
+require("zephyr")
 
 -- alias for vim.api.nvim_set_option()
-local o = vim.o 
+local o = vim.o
 -- vim.api.nvim_buf_set_option()
-local bo = vim.bo 
+local bo = vim.bo
 -- vim.api.nvim_win_set_option()
-local wo = vim.wo 
+local wo = vim.wo
 
 
 -- configuration

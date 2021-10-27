@@ -50,7 +50,6 @@ super + ctrl + {1-9}
 super + ctrl + space
 	bspc node -p cancel
 
-
 ##
 # User Specific config
 ##
@@ -72,12 +71,11 @@ alt + {_,shift + } x
 	/home/wraith/.config/sxhkd/hide-toggle.py {--hide,--unhide}
 
 # toggle borders
-super + {_,alt + } b
-	bspc config border_width {5,0}
+super + b
+	/home/wraith/.config/sxhkd/toggle_borders.sh
 
-super + {_,alt + } g
-	bspc config window_gap {0,5}
-
+super + g
+	/home/wraith/.config/sxhkd/toggle_gaps.sh
 
 # brightness control
 XF86MonBrightnessUp
@@ -102,3 +100,9 @@ super + alt + {s,f}
 
 shift + alt + {s, f}
 	flameshot {gui,full} -d 5000 -p /tmp
+
+super + p
+	cat ~/.secrets/pass.txt | xclip -sel c
+
+super + shift + p
+	cat /dev/null | xclip -sel c

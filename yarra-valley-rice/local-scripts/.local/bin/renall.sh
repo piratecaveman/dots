@@ -19,4 +19,5 @@ while IFS= read -r -d '' folder; do
   cd "${folder}" || exit
   ${BLKRENAME}
   cd ..
-done < <(find "${PWD}" -mindepth 1 -maxdepth 1 -type d -print0)
+done < <(fd --min-depth 1 --max-depth 1 --type d -0 --absolute-path)
+echo

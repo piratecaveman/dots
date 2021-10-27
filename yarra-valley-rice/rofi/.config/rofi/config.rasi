@@ -1,9 +1,6 @@
 configuration 
 {
 	modi: "combi,drun";
-	width: 35;
-	lines: 8;
-	columns: 1;
 	font: "Cascadia Code PL Italic 14";
 	show-icons: true;
 	terminal: "rofi-sensible-terminal";
@@ -11,4 +8,5 @@ configuration
 	theme: "/home/wraith/dots/yarra-valley-rice/rofi/.config/rofi/themes/colors-rofi-dark.rasi";
 	matching: "normal";
 	sidebar-mode: true;
+	padding: 5;
 }

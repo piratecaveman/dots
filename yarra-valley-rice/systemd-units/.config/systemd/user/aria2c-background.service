@@ -1,0 +1,13 @@
+[Unit]
+Description=Aria2c RPC Interface
+After=multi-user.target
+
+[Service]
+Type=simple
+EnvironmentFile=%h/.config/systemd/user/aria2c-background.env
+ExecStart=/usr/bin/aria2c --enable-rpc --rpc-listen-all --rpc-secret ${SECRET}
+ExecStop=/usr/bin/kill $MAINPID
+TimeoutStopSec=5s
+
+[Install]
+WantedBy=default.target

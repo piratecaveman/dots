@@ -11,3 +11,5 @@ alias clpas="head -n 10 /dev/null | xclip -sel c"
 alias myip="curl https://checkip.amazonaws.com"
 alias cman='PAGER=most man'
 alias lsd="lsd -A"
+alias exa="exa --icons"
+alias fd="fd -H"

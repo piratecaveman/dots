@@ -6,7 +6,7 @@ After=multi-user.target
 Type=simple
 ExecStart=/usr/lib/polkit-kde-authentication-agent-1
 ExecStop=/usr/bin/kill $MAINPID
-TimeOutStopSec=5s
+TimeoutStopSec=5s
 
 [Install]
 WantedBy=xlaunched.target
