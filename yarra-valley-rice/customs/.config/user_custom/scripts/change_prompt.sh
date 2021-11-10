@@ -11,10 +11,71 @@ source_file() {
 }
 
 source_file "${COLORS}"
-if [[ "${TERM}" == "linux" ]]; then
-    export PS1="${COLOR_RED}[${COLOR_AQUA}\u${COLOR_WHITE}@${COLOR_VIOLET}\h ${COLOR_GREEN}\W${COLOR_RED}]${COLOR_WHITE}\$${COLOR_RESET} "
-elif [[ "${TERM}" == "xterm-256color" ]]; then
-    export PS1="${COLOR_RED}[${COLOR_AQUA}\u${COLOR_WHITE}@${COLOR_VIOLET}\h ${COLOR_GREEN}\W${COLOR_RED}]${COLOR_WHITE}\$${COLOR_RESET} "
-else
-    export PS1="${COLOR_RED} ${COLOR_RESET}${COLOR_AQUA} ${COLOR_RESET}${COLOR_GREEN} ${COLOR_RESET}${COLOR_RED}${COLOR_BOLD} ${COLOR_RESET} ${COLOR_GREEN}\W${COLOR_RESET} \$ "
-fi
+
+wrap_color() {
+    local wrapper
+    case "${1}" in
+    'underline')
+        wrapper="${COLOR_UNDERLINE}"
+        ;;
+    'bold')
+        wrapper="${COLOR_BOLD}"
+        ;;
+    'red')
+        wrapper="${COLOR_RED}"
+        ;;
+    'green')
+        wrapper="${COLOR_GREEN}"
+        ;;
+    'yellow')
+        wrapper="${COLOR_YELLOW}"
+        ;;
+    'blue')
+        wrapper="${COLOR_BLUE}"
+        ;;
+    'violet')
+        wrapper="${COLOR_VIOLET}"
+        ;;
+    'aqua')
+        wrapper="${COLOR_AQUA}"
+        ;;
+    'white')
+        wrapper="${COLOR_WHITE}"
+        ;;
+    *)
+        wrapper="${COLOR_RESET}"
+        ;;
+    esac
+    echo "${wrapper}${2}${COLOR_RESET}"
+}
+
+case "${TERM}" in
+'linux' | 'xterm-256color')
+    PS1=$(
+        printf "%s%s%s%s%s%s%s" \
+            "$(wrap_color 'red' '[')" \
+            "$(wrap_color 'aqua' '\u')" \
+            "$(wrap_color 'white' '@')" \
+            "$(wrap_color 'violet' '\h')" \
+            "$(wrap_color 'green' ' \W')" \
+            "$(wrap_color 'red' ']')" \
+            "$(wrap_color 'white' '\$ ')"
+    )
+    ;;
+'alacritty')
+    PS1=$(
+        printf "%s%s%s%s%s%s" \
+            "$(wrap_color 'red' ' ')" \
+            "$(wrap_color 'aqua' ' ')" \
+            "$(wrap_color 'green' ' ')" \
+            "$(wrap_color 'bold' "$(wrap_color 'red' ' ')") " \
+            "$(wrap_color 'green' '\W ')" \
+            "$(wrap_color 'reset' '\$ ')"
+    )
+    ;;
+*)
+    PS1='[\u@\h \W]\$ '
+    ;;
+esac
+
+export PS1

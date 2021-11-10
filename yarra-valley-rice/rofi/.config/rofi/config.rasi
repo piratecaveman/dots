@@ -1,7 +1,7 @@
 configuration 
 {
 	modi: "combi,drun";
-	font: "Cascadia Code PL Italic 14";
+	font: "IBM Plex Mono 14";
 	show-icons: true;
 	terminal: "rofi-sensible-terminal";
 	icon-theme: "Papirus";

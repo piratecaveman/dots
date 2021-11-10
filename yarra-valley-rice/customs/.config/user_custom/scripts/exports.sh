@@ -18,6 +18,7 @@ SOURCES_LIST=(
     "${SCRIPTS}/paths.sh"
     "${SCRIPTS}/proxy.sh"
     "${SCRIPTS}/variables.sh"
+    "${SCRIPTS}/clouds.sh"
 )
 
 for item in "${SOURCES_LIST[@]}"; do
