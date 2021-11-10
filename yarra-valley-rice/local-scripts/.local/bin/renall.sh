@@ -51,10 +51,11 @@ wrap_color() {
 
 BLKRENAME="/home/wraith/.local/bin/blkrename.sh"
 
-while IFS= read -r -d'' folder; do
+while IFS= read -r -d '' folder; do
     printf "\t%s%s\n" \
         "$(wrap_color 'green' "Renaming files in ")" \
         "$(wrap_color 'bold' "$(wrap_color 'aqua' "${folder}")")"
+    echo "$folder"
     cd "${folder}" || exit
     ${BLKRENAME}
     cd ..
