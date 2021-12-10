@@ -24,3 +24,11 @@ SOURCES_LIST=(
 for item in "${SOURCES_LIST[@]}"; do
     source_file "${item}"
 done
+
+DROPIN_DIR="${SCRIPTS}/sources"
+
+if [[ -d "${DROPIN_DIR}" ]]; then
+    while IFS= read -r -d '' item; do
+        source_file "${item}"
+    done < <(fd . --absolute-path --hidden --type f --extension sh --min-depth 1 --max-depth 1 "${DROPIN_DIR}" -0)
+fi

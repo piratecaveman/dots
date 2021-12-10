@@ -5,8 +5,9 @@ configuration
 	show-icons: true;
 	terminal: "rofi-sensible-terminal";
 	icon-theme: "Papirus";
-	theme: "/home/wraith/dots/yarra-valley-rice/rofi/.config/rofi/themes/colors-rofi-dark.rasi";
 	matching: "normal";
 	sidebar-mode: true;
 	padding: 5;
 }
+
+// @theme "/home/wraith/dots/yarra-valley-rice/rofi/.config/rofi/themes/colors-rofi-dark.rasi";

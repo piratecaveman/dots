@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-alias ls="ls -A --color=always"
-alias grep="grep --color=always"
+alias ls="ls -A --color=auto"
+alias grep="grep --color=auto"
 alias less="less -r"
 alias ip="ip -c=always"
 alias userctl="systemctl --user"

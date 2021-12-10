@@ -1,15 +1,15 @@
 font:
     normal:
-        family: Cascadia Code PL
+        family: IBM Plex Mono
         style: regular
     bold:
-        family: Cascadia Code PL
+        family: IBM Plex Mono
         style: bold
     italic:
-        family: Cascadia Code PL
+        family: IBM Plex Mono
         style: italic
     bold_italic:
-        family: Cascadia Code PL
+        family: IBM Plex Mono
         style: bold italic
-    size: 10
+    size: 12
     draw_bold_text_with_bright_colors: true

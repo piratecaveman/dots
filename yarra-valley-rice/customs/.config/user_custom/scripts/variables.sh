@@ -8,3 +8,4 @@ export ANDROID_AVD_HOME="/media/ntfs/shared/android-avd-home"
 export TERMINAL="/usr/bin/urxvt"
 export TDESKTOP_DISABLE_TRAY_COUNTER=1
 export XDG_CONFIG_HOME="${HOME}/.config"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
