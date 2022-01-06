@@ -27,7 +27,7 @@ create_blacklist() {
     for item in "${BLACKLIST[@]}"; do
         string="${string} --blacklist ${item}"
     done
-    echo "${string}"
+    echo "${string}" | xargs
 }
 
 create_recipients() {
@@ -35,20 +35,21 @@ create_recipients() {
     for item in "${RECIPIENTS[@]}"; do
         string="${string} --recipient ${item}"
     done
-    echo "${string}"
+    echo "${string}" | xargs
 }
 
 blacklisted_paths="$(create_blacklist)"
 recipients="$(create_recipients)"
 
 # shellcheck disable=SC2086
-"$(
-    "${ENCTRON_PATH}" --copy-blacklisted \
-        ${blacklisted_paths} \
-        --extension asc \
-        --input "${DENS}" \
-        --output "${BASEPATH}/rustic-den" \
-        --passphrase-file "${PASSPHRASE_FILE}" \
-        --signer "${SIGNER}" \
-        ${recipients}
-)"
+result="$("${ENCTRON_PATH}" --copy-blacklisted \
+    ${blacklisted_paths} \
+    --extension asc \
+    --input "${DENS}" \
+    --output "${BASEPATH}/rustic-den" \
+    --passphrase-file "${PASSPHRASE_FILE}" \
+    --signer "${SIGNER}" \
+    ${recipients})"
+
+echo "${result}"
+/usr/bin/touch /tmp/secrets-encryption.timestamp
