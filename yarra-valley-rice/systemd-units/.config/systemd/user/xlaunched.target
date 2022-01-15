@@ -1,5 +1,0 @@
-[Unit]
-Description=Custom Target for apps launch
-Requires=default.target
-After=default.target
-AllowIsolate=yes

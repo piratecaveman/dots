@@ -1,8 +1,0 @@
-# grizzly-den
-*/5 * * * * /usr/bin/python /home/wraith/storage/crons/cryptron.py --operation encrypt --source /media/ntfs/home/leshen/dens/grizzly-den/ --destination /media/ntfs/home/leshen/encrypted-dens/grizzly-den/ --recipient BlueRingedOctopus --recipient Meerkat --recipient Kshitij --passphrase-file /home/wraith/.secrets/pass.txt
-
-# wolf-den
-*/5 * * * * /usr/bin/python /home/wraith/storage/crons/cryptron.py --operation encrypt --source /media/ntfs/home/leshen/dens/wolf-den/ --destination /media/ntfs/home/leshen/encrypted-dens/wolf-den/ --recipient BlueRingedOctopus --recipient Meerkat --recipient Kshitij --passphrase-file /home/wraith/.secrets/pass.txt
-
-# rsync task
-*/10 * * * * /usr/bin/bash /home/wraith/storage/crons/encron.sh
